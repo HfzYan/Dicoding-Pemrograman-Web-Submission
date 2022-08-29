@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: inline;
+  background-image: url("https://media4.giphy.com/media/YsTs5ltWtEhnq/giphy.gif?cid=790b7611ac99bf90b43b16ce7c9c0db2486fe782cf005765&rid=giphy.gif&ct=g");
+  background-size: cover;
+  max-width: 100%;
+  max-height: 400px;
+  box-shadow: 5px 2px 5px 10px #acd4dc;
+}
+
+header > h1 {
+  font-size: 4em;
+  padding: 50px;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+nav {
+  background-color: rgb(68, 165, 255, 0.2);
+  display: flex;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 0px 50px 5px white;
+}
+
+nav > a {
+  flex-basis: 15%;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+}
+
+nav > a:hover {
+  color: rgb(244, 255, 161);
+  font-weight: 700;
+}
+
+main {
+  padding-top: 40px;
+  display: flex;
+}
+
+main > aside {
+  position: sticky;
+  top: 20px;
+  flex-basis: 25%;
+  box-shadow: 2px 2px 5px 5px #c2c3c3;
+  margin: 20px;
+  border-radius: 5px;
+  max-height: 500px;
+}
+
+main > #content {
+  flex-basis: 75%;
+  box-shadow: 2px 2px 5px 5px #c2c3c3;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  /* box-shadow: 10px 0px 10px -5px rgb(98, 184, 255) inset; */
+}
+
+article {
+  margin: 10px 0px 75px 0px;
+}
+
+article h1 {
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: rgb(98, 184, 255);
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+p.desc {
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+div.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+flexrow.img {
+  flex-basis: 100%;
+  max-height: 100px;
+}
+
+flexrow.img.aside {
+  /* max-height: 75px; */
+  max-width: 100px;
+}
+
+flexrow.img.aside:hover {
+  background-color: #cdffff;
+  border-radius: 125px;
+  box-shadow: 0px 0px 50px 10px #cdffff;
+}
+
+flexcol {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex-basis: 10%;
+  min-width: 100px;
+  align-items: center;
+}
+
+flexcol.project {
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+flexrow img {
+  max-width: 100%;
+  max-height: 75%;
+  align-items: center;
+  justify-content: center;
+}
+flexrow > p,
+h2 {
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+h2.project {
+  text-align: left;
+}
+
+flexrow.img.profile {
+  height: 200px;
+  max-height: 200px;
+}
+
+flexrow.img.profile > img {
+  border-radius: 125px;
+}
+
+.maxbasis {
+  flex-basis: 100%;
+}
+
+project-article {
+  margin-top: 50px;
+}
+
+footer {
+  margin-top: 100px;
+  height: 100px;
+  width: 100%;
+  background-image: url("./img/header-bg.jpg");
+  box-shadow: 5px -2px 5px 10px #acd4dc;
+  padding: 50px;
+}
+
+footer > h4 {
+  color: antiquewhite;
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    position: inline;
+    background-image: url("./img/header-bg.jpg");
+    background-size: cover;
+    max-width: 100%;
+    max-height: 400px;
+    box-shadow: 5px 2px 5px 10px #acd4dc;
+  }
+
+  header > h1 {
+    font-size: 4em;
+    padding: 30px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+  }
+
+  main {
+    width: 100%;
+  }
+  main > #content {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  flexcol {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    flex-basis: 10%;
+    min-width: 50px;
+    align-items: center;
+  }
+
+  article {
+    margin: 5px 0px 37px 0px;
+  }
+  flexrow > p,
+  h2 {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: small;
+  }
+  flexcol.project {
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  aside {
+    flex-basis: 0%;
+    visibility: collapse;
+    max-width: 0px;
+  }
+
+  nav {
+    visibility: collapse;
+  }
+}
